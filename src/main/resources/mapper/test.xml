@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yeseung.mybatistest2.mapper.TestMapper">
+
+    <select id="selectTest" resultType="com.yeseung.mybatistest2.entity.Test">
+        select * from test
+    </select>
+
+    <insert id="insertTest" parameterType="Long">
+        insert into test(
+                         id, name, description
+        ) values (
+                  #{id}, 'Test', 'gggg'
+                         )
+    </insert>
+</mapper>
